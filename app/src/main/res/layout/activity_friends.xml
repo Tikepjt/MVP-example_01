@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout>
 
-    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorPrimaryDark"
@@ -52,6 +54,7 @@
             </android.support.v7.widget.Toolbar>
 
             <android.support.design.widget.TabLayout
+                android:id="@+id/friends_tl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-thin"
@@ -59,12 +62,21 @@
                 app:tabTextColor="#ffffffff">
 
                 <android.support.design.widget.TabItem
+                    android:id="@+id/request_ti"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Request"
                     android:textSize="24dp" />
 
+                <!--<android.support.design.widget.TabItem-->
+                    <!--android:id="@+id/request_ti"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Request"-->
+                    <!--android:textSize="24dp" />-->
+
                 <android.support.design.widget.TabItem
+                    android:id="@+id/friends_ti"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Friends"
@@ -74,14 +86,19 @@
 
         </android.support.design.widget.AppBarLayout>
 
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/friends_rv"
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_height="match_parent" />
 
-        </android.support.v7.widget.RecyclerView>
+
+        <!--<android.support.v7.widget.RecyclerView-->
+            <!--android:id="@+id/friends_rv"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="1">-->
+
+        <!--</android.support.v7.widget.RecyclerView>-->
 
     </LinearLayout>
 </layout>
